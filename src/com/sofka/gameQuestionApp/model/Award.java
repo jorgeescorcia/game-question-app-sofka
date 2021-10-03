@@ -1,14 +1,18 @@
 package com.sofka.gameQuestionApp.model;
 
 public abstract class Award {
-    private Integer Quantity;
+    private Integer quantity;
+
+    public Award(int amount) {
+        this.quantity = amount;
+    }
 
     public Integer getQuantity() {
-        return Quantity;
+        return quantity;
     }
 
     public void setQuantity(Integer quantity) {
-        Quantity = quantity;
+        this.quantity = quantity;
     }
 
     public abstract String getType();

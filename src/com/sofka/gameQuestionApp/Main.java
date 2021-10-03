@@ -8,5 +8,7 @@ public class Main {
 	// write your code here
         Match match = new Match();
         match.setGameConfiguration();
+        System.out.println("!! configuracion completada con exito !!");
+        match.startGame();
     }
 }
