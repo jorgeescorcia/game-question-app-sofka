@@ -34,7 +34,7 @@ public class Player {
         //2. option2
         Integer optionNumber=1 ;
         for ( Option option : optionList ) {
-            System.out.println( optionNumber + ". " + option.getName() );
+            System.out.println( optionNumber + ". " + option.getDescription() );
             optionNumber++;
         }
     }

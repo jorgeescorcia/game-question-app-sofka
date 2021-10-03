@@ -1,18 +1,28 @@
 package com.sofka.gameQuestionApp.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Category {
     private String name;
-    private List<Question> questionsAvailable;
+    private List<Question> availableQuestions;
+
+    public Category (String name){
+        this.name = name;
+    }
+
+    public Category(String categoryName, ArrayList<Question> questions) {
+        this.name = categoryName;
+        this.availableQuestions = questions;
+    }
 
 
     public List<Question> getAvailableQuestions() {
-        return questionsAvailable;
+        return availableQuestions;
     }
 
-    public void setQuestionsAvailable(List<Question> questionsAvailable) {
-        this.questionsAvailable = questionsAvailable;
+    public void setAvailableQuestions(List<Question> availableQuestions) {
+        this.availableQuestions = availableQuestions;
     }
 
     public String getName() {
