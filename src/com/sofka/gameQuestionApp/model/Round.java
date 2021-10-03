@@ -12,8 +12,8 @@ public class Round {
     private Boolean wasCorrectAnswered;
     private Option chooseOption;
 
-    public Round(){
-
+    public Round(Category randomCategory){
+        this.category = randomCategory;
     }
 
     public Question getRandomQuestion() {
@@ -25,10 +25,11 @@ public class Round {
 
     private void calculateRandomQuestion(){
         Question randomQuestionResponse =null;
-        List<Question> availableQuestions= category.getAvailableQuestions();
+        List<Question> availableQuestions= this.category.getAvailableQuestions();
         //apply random
         int randomNum = ThreadLocalRandom.current()
                 .nextInt(this.minimumQuestionsAllowed, this.maximumQuestionsAllowed + 1);
+         randomQuestionResponse = availableQuestions.get(randomNum);
         setRandomQuestion( randomQuestionResponse );
     }
 
