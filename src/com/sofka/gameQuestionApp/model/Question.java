@@ -7,6 +7,14 @@ public class Question {
     private List< Option > options;
     private Integer correctOptionPosition;
 
+    public Question(String description) {
+        this.description = description;
+    }
+
+    public Question() {
+
+    }
+
     public String getDescription() {
         return description;
     }
